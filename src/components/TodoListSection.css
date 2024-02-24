@@ -1,0 +1,54 @@
+.todo-items-heading {
+    font-family: "Roboto";
+    font-size: 32px;
+    font-weight: 700;
+  }
+  
+  .todo-items-heading-subpart {
+    font-family: "Roboto";
+    font-size: 32px;
+    font-weight: 500;
+  }
+  .todo-items-container {
+    margin: 0;
+    padding: 0;
+  }
+  
+.create-task-heading {
+  font-family: "Roboto";
+  font-size: 32px;
+  font-weight: 700;
+  color:green;
+}
+
+.create-task-heading-subpart {
+  font-family: "Roboto";
+  font-size: 32px;
+  font-weight: 500;
+  color: rgb(110, 91, 76);
+}
+.todo-user-input {
+  background-color: white;
+  width: 100%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e4e7eb;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 15px;
+}
+.button {
+  color: white;
+  background-color: rgb(172, 154, 127);
+  /* background-color: rgb(110, 91, 76); */
+  font-family: "Roboto";
+  font-size: 18px;
+  border-width: 0;
+  border-radius: 4px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+}  

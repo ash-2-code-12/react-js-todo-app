@@ -1,0 +1,24 @@
+.logo {
+    height: 80px;
+    width: 50px;
+    color: green;
+
+
+}
+
+.nav-bg-col {
+    background-color: whitesmoke;
+    height: fit-content;
+    padding: 4px;
+    height: 80px;
+}
+
+#navbar-text.nav-style {
+    font-size: 28px;
+    font-weight: 600;
+    color: rgb(110, 91, 76);
+}
+
+.nav-span-style {
+    color: rgb(172, 154, 127);
+}
