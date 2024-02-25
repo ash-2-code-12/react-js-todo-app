@@ -8,17 +8,21 @@ const TodoListSection = () => {
   const [currentDeleteId, setCurrentDeleteId] = useState(null);
   // const [todosCount, setTodosCount] = useState(0);
   const [showDelete,setShowDelete] = useState(false);
+  const [todoIdGenerator, setTodoIdGenerator] = useState(0);
 
   useEffect(() => {
     const storedTodoList = JSON.parse(localStorage.getItem('todoList'));
+    const setTodoIdGenerator = JSON.parse(localStorage.getItem('todoIdGen'));
     if (storedTodoList !== null) {
       setTodoList(storedTodoList);
+      setTodoIdGenerator(parseInt(storedTodoIdGen));
     }
     else {
       setTodoList([
         { text: "Sample text 1", uniqueNo:  0, isChecked: false },
         { text: "Sample text 2", uniqueNo:  1, isChecked: true }
       ]);
+      setTodoIdGenerator(2);
     }
 
   }, []);//initial fetch of todoList from local storage
@@ -45,9 +49,10 @@ const TodoListSection = () => {
         //update todoList state
         let newTodo = {
           text: userInputValue,
-          uniqueNo: todoList.length+1,
+          uniqueNo: todoIdGenerator+1,
           isCheked:false
         };
+        setTodoIdGenerator(parseInt(todoIdGenerator)+1);
         setTodoList(todoList.concat(newTodo));
         setUserInputValue(""); //updating the value of input element
 
@@ -99,7 +104,9 @@ const TodoListSection = () => {
 
   const onSaveTodo = () => {
     let todoListJSONstring = JSON.stringify(todoList);
+    let todoIdGenJSONstring = JSON.stringify(todoIdGenerator);
     localStorage.setItem('todoList', todoListJSONstring);
+    localStorage.setItem('todoIdGen', todoIdGenJSONstring);
 
   };
 
