@@ -12,7 +12,7 @@ const TodoListSection = () => {
 
   useEffect(() => {
     const storedTodoList = JSON.parse(localStorage.getItem('todoList'));
-    const setTodoIdGenerator = JSON.parse(localStorage.getItem('todoIdGen'));
+    const storedTodoIdGen = JSON.parse(localStorage.getItem('todoIdGen'));
     if (storedTodoList !== null) {
       setTodoList(storedTodoList);
       setTodoIdGenerator(parseInt(storedTodoIdGen));
